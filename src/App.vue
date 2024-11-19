@@ -1,29 +1,31 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { dateZhCN, zhCN } from 'naive-ui';
 
 import logo from './assets/logo.svg';
 import HelloWorld from './components/HelloWorld.vue';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" :src="logo" width="125" height="125">
+  <n-config-provider inline-theme-disabled :locale="zhCN" :date-locale="dateZhCN">
+    <header>
+      <img alt="Vue logo" class="logo" :src="logo" width="125" height="125">
 
-    <div class="wrapper">
-      <hello-world msg="You did it!" />
+      <div class="wrapper">
+        <hello-world msg="You did it!" />
 
-      <nav>
-        <router-link to="/">
-          Home
-        </router-link>
-        <router-link to="/about">
-          About
-        </router-link>
-      </nav>
-    </div>
-  </header>
+        <nav>
+          <router-link to="/">
+            Home
+          </router-link>
+          <router-link to="/about">
+            About
+          </router-link>
+        </nav>
+      </div>
+    </header>
 
-  <router-view />
+    <router-view />
+  </n-config-provider>
 </template>
 
 <style scoped>
