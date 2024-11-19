@@ -13,5 +13,16 @@ export default {
     'alpha-value-notation': ['number'],
     'color-function-notation': ['legacy'],
     'custom-property-empty-line-before': null,
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'tailwind',
+          'config',
+          'apply',
+          'theme',
+        ],
+      },
+    ],
   },
 };
