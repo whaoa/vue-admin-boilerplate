@@ -47,13 +47,32 @@ export default eslint(
       'perfectionist/sort-imports': [
         'error',
         {
-          type: 'natural',
+          type: 'alphabetical',
           order: 'asc',
           newlinesBetween: 'always',
           sortSideEffects: false,
           internalPattern: ['~/**'],
+          customGroups: {
+            value: {
+              '@custom/bundler': [
+                'vite',
+                '@vitejs/**',
+                'vite-plugin-*',
+                'vite-plugin-*/**',
+                'unplugin-*',
+                'unplugin-*/**',
+              ],
+              '@custom/vue': [
+                'vue',
+                'pinia',
+                'naive-ui',
+                'vue-*',
+              ],
+            },
+          },
           groups: [
             'builtin',
+            ['@custom/bundler', '@custom/vue'],
             'external',
             'internal',
             'object',
@@ -88,6 +107,20 @@ export default eslint(
           ignoreRegExpLiterals: true,
           ignoreHTMLTextContents: false,
           ignoreHTMLAttributeValues: true,
+        },
+      ],
+      'vue/attribute-hyphenation': ['error', 'always'],
+      'vue/component-options-name-casing': ['error', 'PascalCase'],
+      'vue/custom-event-name-casing': ['error', 'camelCase'],
+      // https://vuejs.org/style-guide/rules-strongly-recommended.html#component-name-casing-in-templates
+      'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+      'vue/define-props-declaration': ['error', 'runtime'],
+      'vue/define-emits-declaration': ['error', 'type-literal'],
+      'vue/define-macros-order': [
+        'error',
+        {
+          order: ['defineOptions', 'defineModel', 'defineProps', 'defineEmits', 'defineSlots'],
+          defineExposeLast: true,
         },
       ],
     },

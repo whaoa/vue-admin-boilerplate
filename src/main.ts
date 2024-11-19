@@ -7,9 +7,18 @@ import router from './router';
 import './styles/tailwind.css';
 import './assets/main.css';
 
-const app = createApp(App);
+function bootstrap() {
+  const app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
+  app.use(createPinia());
+  app.use(router);
 
-app.mount('#app');
+  // https://www.naiveui.com/zh-CN/dark/docs/style-conflict
+  const meta = document.createElement('meta');
+  meta.name = 'naive-ui-style';
+  document.head.appendChild(meta);
+
+  app.mount('#app');
+}
+
+bootstrap();
