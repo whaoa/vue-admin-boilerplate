@@ -51,7 +51,7 @@ export default eslint(
           order: 'asc',
           newlinesBetween: 'always',
           sortSideEffects: false,
-          internalPattern: ['@/**'],
+          internalPattern: ['~/**'],
           groups: [
             'builtin',
             'external',
