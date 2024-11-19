@@ -2,6 +2,10 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
-    "EditorConfig.EditorConfig"
+    "EditorConfig.EditorConfig",
+    "bradlc.vscode-tailwindcss",
+    "stylelint.vscode-stylelint",
+    "yoavbls.pretty-ts-errors",
+    "streetsidesoftware.code-spell-checker"
   ]
 }
