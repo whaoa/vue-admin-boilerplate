@@ -5,6 +5,7 @@ import { setupNaive } from './libs/naive';
 import { setupRouter } from './router';
 import { setupStore } from './stores';
 
+import './styles/theme.css';
 import './styles/tailwind.css';
 
 function bootstrap() {

@@ -67,6 +67,7 @@ export default eslint(
                 'pinia',
                 'naive-ui',
                 'vue-*',
+                '@vueuse/*',
               ],
             },
           },

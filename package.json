@@ -30,6 +30,8 @@
     "lint:style": "stylelint \"src/**/*.{css,scss,vue}\""
   },
   "dependencies": {
+    "@vueuse/core": "^11.3.0",
+    "colord": "^2.9.3",
     "ky": "^1.7.2",
     "naive-ui": "^2.40.1",
     "pinia": "^2.2.6",

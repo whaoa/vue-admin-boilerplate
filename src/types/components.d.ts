@@ -11,5 +11,6 @@ declare module 'vue' {
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThemeProvider: typeof import('./../components/theme/ThemeProvider.vue')['default']
   }
 }
